@@ -1,14 +1,14 @@
 const concat = ({ titles, artists, hrefs, icons }) => {
-    const newData = []
+    const newData = [];
     for (let i = 0; i < titles.length; i++) {
-        newData.push({ 
-            name: titles[i], 
-            artist: artists[i], 
-            href: hrefs[i], 
-            icon: icons[i] 
-        })
+        newData.push({
+            name: titles[i],
+            artist: artists[i],
+            href: hrefs[i],
+            icon: icons[i],
+        });
     }
-    return newData
-}
+    return newData;
+};
 
-module.exports = concat
+module.exports = concat;
