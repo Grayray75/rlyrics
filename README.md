@@ -1,5 +1,5 @@
 # Lyrics Finder
-A very very.. simple module made by roogue that allows you to scrape song lyrics from `https://www.musixmatch.com/`
+A very very.. simple module that allows you to scrape song lyrics from `https://www.musixmatch.com/`
 
 ## Installation
 
