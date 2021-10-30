@@ -1,2 +1,2 @@
-const { search, scrape } = require('./src/index')
-module.exports = { search, scrape }
+const { search, lyricsFinder } = require('./src/index')
+module.exports = { search, lyricsFinder }

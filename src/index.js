@@ -1,4 +1,4 @@
 const search = require('./bin/search')
-const scrape = require('./bin/scrape')
+const lyricsFinder = require('./bin/scrape')
 
-module.exports = { search, scrape }
+module.exports = { search, lyricsFinder }
