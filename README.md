@@ -31,4 +31,4 @@ search('Alan Walker Alone').then(console.log, console.error);
 ```
 
 ## License
-[ISC](https://choosealicense.com/licenses/isc/)
+[MIT](https://choosealicense.com/licenses/mit/)
