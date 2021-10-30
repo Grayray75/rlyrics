@@ -4,7 +4,7 @@ A very very.. simple module that allows you to scrape song lyrics from `https://
 ## Installation
 
 ```bash
-npm i git+https://github.com/roogue/lyrics-finder.git
+npm i rlyrics-finder
 ```
 
 ## Basic Usage
