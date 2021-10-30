@@ -1,13 +1,13 @@
 const axios = require('axios')
 const baseUrl = "https://www.musixmatch.com"
 const cheerio = require('cheerio')
-const search = require('../search')
+const search = require('./search')
 
 const scrape = async (query) => {
     if (!query) throw new Error('Query is required')
     const result = await search(query)
-    if (!result) return null
-
+    if (!result.length) return null
+    
     const bestResult = await axios.get(baseUrl + result[0].href).catch(e => { throw new Error('Error while requesting data') })
     if (!bestResult) return null
 

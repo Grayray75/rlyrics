@@ -18,7 +18,7 @@ const search = async (query) => {
     const hrefs = titlesHtml.toArray().map(x => { return $(x).attr('href') })
     hrefs.shift()
     
-    return require('./util/concat')
+    return require('../util/concat')
         ({
             titles,
             artists,
