@@ -1,7 +1,7 @@
 {
   "name": "rlyrics-finder",
-  "version": "1.1.0",
-  "description": "A very very.. simple module made by roogue that allows you to scrape song lyrics from",
+  "version": "1.1.1",
+  "description": "A very very.. simple module that allows you to scrape song lyrics from https://www.musixmatch.com/",
   "main": "index.js",
   "repository": {
     "type": "git",
