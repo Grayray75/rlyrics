@@ -1,6 +1,6 @@
 {
-  "name": "rlyrics-finder",
-  "version": "1.1.1",
+  "name": "rlyrics",
+  "version": "1.2.1",
   "description": "A very very.. simple module that allows you to scrape song lyrics from https://www.musixmatch.com/",
   "main": "index.js",
   "repository": {
