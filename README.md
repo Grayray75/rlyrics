@@ -1,11 +1,11 @@
-# Lyrics Finder
+# Rlyrics
 
-A very very.. simple module that allows you to scrape song lyrics from `https://www.musixmatch.com/`
+A very very.. simple module that allows you to scrape songs lyrics from `https://www.musixmatch.com/`
 
 ## Installation
 
 ```bash
-npm i rlyrics-finder
+npm i rlyrics
 ```
 
 ## Basic Usage
@@ -33,6 +33,14 @@ You can also use the search function to get an array of search results.
 ```js
 const { search } = require("lyrics-finder");
 search("Alan Walker Alone").then(console.log, console.error);
+```
+
+## Get Details Function
+
+Get full details of a song.
+```js
+const { getDetails } = require("lyrics-finder");
+getDetails("Alan Walker Alone").then(console.log, console.error);
 ```
 
 ## License
