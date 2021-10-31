@@ -6,7 +6,7 @@ const search = async (query) => {
     if (!query) throw new Error("Query is required.");
     if (typeof query !== "string") throw new Error("Query must be a String!");
     const url = baseUrl + query.replace("/ +/g", "%20");
-    const result = await axios.get(url).catch((e) => {
+    const result = await axios.get(encodeURI(url)).catch((e) => {
         throw new Error("Error while requesting data");
     });
 
@@ -28,7 +28,7 @@ const search = async (query) => {
     });
     hrefs.shift();
     const icons = iconHtml.toArray().map((x) => {
-        return $(x).attr("srcset").split(", ");
+        return $(x).attr("srcset")?.split(", ").map(e => e.split(' ')[0] );
     });
     icons.shift();
 
