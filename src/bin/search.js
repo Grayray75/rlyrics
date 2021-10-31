@@ -28,7 +28,10 @@ const search = async (query) => {
     });
     hrefs.shift();
     const icons = iconHtml.toArray().map((x) => {
-        return $(x).attr("srcset")?.split(", ").map(e => e.split(' ')[0] );
+        return $(x)
+            .attr("srcset")
+            ?.split(", ")
+            .map((e) => e.split(" ")[0]);
     });
     icons.shift();
 
