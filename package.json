@@ -1,18 +1,18 @@
 {
   "name": "rlyrics",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A very very.. simple module that allows you to scrape song lyrics from https://www.musixmatch.com/",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/roogue/lyrics-finder.git"
+    "url": "git+https://github.com/roogue/rlyrics.git"
   },
   "author": "roogue",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/roogue/lyrics-finder/issues"
+    "url": "https://github.com/roogue/rlyrics/issues"
   },
-  "homepage": "https://github.com/roogue/lyrics-finder#readme",
+  "homepage": "https://github.com/roogue/rlyrics#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10"

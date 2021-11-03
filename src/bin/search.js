@@ -3,6 +3,10 @@ const baseUrl = "https://www.musixmatch.com/search/";
 const cheerio = require("cheerio");
 
 const search = async (query) => {
+    /**
+     * @param {String} query - A search query
+     * @returns {Array} Songs' title, artist, href url, icon
+    */
     if (!query) throw new Error("Query is required.");
     if (typeof query !== "string") throw new Error("Query must be a String!");
     const url = baseUrl + query.replace("/ +/g", "%20");

@@ -5,6 +5,10 @@ const cheerio = require("cheerio");
 const search = require("./search");
 
 const getDetails = async (query) => {
+    /**
+     * @param {String} query - A https://www.musixmatch.com/lyric/* link or search query
+     * @returns {?Object} Song's name, artist, icon and lyrics of a song.
+    */
     let url;
     if (query.startsWith(lyricsURL)) {
         url = query;

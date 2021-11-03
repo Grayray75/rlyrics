@@ -1,4 +1,12 @@
 const concat = ({ titles, artists, hrefs, icons }) => {
+    /**
+     * @private
+     * @param {Array} titles
+     * @param {Array} artists
+     * @param {Array} hrefs
+     * @param {Array} icons
+     * @returns {Array} Songs' title, artist, href url, icon
+    */
     const newData = [];
     for (let i = 0; i < titles.length; i++) {
         newData.push({
