@@ -31,7 +31,7 @@ find("Alan Walker Alone").then(console.log, console.error);
 You can also use the search function to get an array of search results.
 
 ```js
-const { search } = require("lyrics-finder");
+const { search } = require("rlyrics");
 search("Alan Walker Alone").then(console.log, console.error);
 ```
 
@@ -39,7 +39,7 @@ search("Alan Walker Alone").then(console.log, console.error);
 
 Get full details of a song.
 ```js
-const { getDetails } = require("lyrics-finder");
+const { getDetails } = require("rlyrics");
 getDetails("Alan Walker Alone").then(console.log, console.error);
 ```
 
