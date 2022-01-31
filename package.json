@@ -1,8 +1,10 @@
 {
     "name": "rlyrics",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "A module that allows users to scrape song lyrics from musixmatch.",
-    "main": "main.js",
+    "main": "dist/main.js",
+    "types": "dist/main.d.ts",
+    "prepublish": "tsc",
     "scripts": {
         "start": "node dist/main.js",
         "build": "tsc -p ."
