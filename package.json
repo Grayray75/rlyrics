@@ -1,20 +1,27 @@
 {
-  "name": "rlyrics",
-  "version": "1.2.3",
-  "description": "A very very.. simple module that allows you to scrape song lyrics from https://www.musixmatch.com/",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roogue/rlyrics.git"
-  },
-  "author": "roogue",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/roogue/rlyrics/issues"
-  },
-  "homepage": "https://github.com/roogue/rlyrics#readme",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "cheerio": "^1.0.0-rc.10"
-  }
+    "name": "rlyrics",
+    "version": "2.0.0",
+    "description": "A module that allows users to scrape song lyrics from musixmatch.",
+    "main": "main.js",
+    "scripts": {
+        "test": "node ./src/test/test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/roogue/rlyrics.git"
+    },
+    "author": "roogue",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/roogue/rlyrics/issues"
+    },
+    "homepage": "https://github.com/roogue/rlyrics#readme",
+    "dependencies": {
+        "axios": "^0.24.0",
+        "cheerio": "^1.0.0-rc.10"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.13",
+        "dotenv": "^15.0.0"
+    }
 }

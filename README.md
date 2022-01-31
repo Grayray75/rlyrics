@@ -1,6 +1,8 @@
 # Rlyrics
+A module that allows users to scrape song lyrics from musixmatch.
 
-A very very.. simple module that allows you to scrape songs lyrics from `https://www.musixmatch.com/`
+## Requirements
+* Node.js
 
 ## Installation
 
@@ -8,41 +10,82 @@ A very very.. simple module that allows you to scrape songs lyrics from `https:/
 npm i rlyrics
 ```
 
-## Basic Usage
+## Usage
 
-Getting lyrics from the best search result.
+```javascript
+const { Rlyrics } = require("rlyrics");
+const rlyrics = new Rlyrics();
 
-```js
-const { find } = require("rlyrics");
+// Define Query
+const query = "Alan walker - Alone"
+const URL = "https://www.musixmatch.com/lyrics/Alan-Walker-3/Alone"
 
-//With Async Function
-(async () => {
-    const query = "Alan Walker Alone";
-    const lyrics = await find(query);
-    console.log(lyrics); //returns null if no lyrics was found
-})();
+// #getLyrics Method - Get lyrics of the best result
+rlyrics.getLyrics(query)
 
-//Or With Then()
-find("Alan Walker Alone").then(console.log, console.error);
+// #search Method - Search for songs
+rlyrics.search(query)
+
+// #find Method - Get detailed datas of the best result
+rlyrics.find(url) 
 ```
 
-## Search Function
+## Example Response
+```javascript
+// Search Result
+[
+  SearchResult {
+    title: 'Alone',
+    artist: 'Alan Walker',
+    href: '/lyrics/Alan-Walker-3/Alone',
+    url: 'https://www.musixmatch.com/lyrics/Alan-Walker-3/Alone',
+    icon: [
+      'https://s.mxmcdn.net/images-storage/albums4/0/6/5/4/3/7/36734560.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/6/5/4/3/7/36734560_350_350.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/6/5/4/3/7/36734560_350_350.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/6/5/4/3/7/36734560_350_350.jpg'
+    ]
+  },
+  SearchResult {
+    title: 'Alan Walker (I)',
+    artist: 'RamiKz',
+    href: '/lyrics/RamiKz/Alan-Walker-I',
+    url: 'https://www.musixmatch.com/lyrics/RamiKz/Alan-Walker-I',
+    icon: [
+      'https://s.mxmcdn.net/images-storage/albums4/0/2/0/4/3/4/40434020.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/2/0/4/3/4/40434020_350_350.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/2/0/4/3/4/40434020_350_350.jpg',
+      'https://s.mxmcdn.net/images-storage/albums4/0/2/0/4/3/4/40434020_350_350.jpg'
+    ]
+  }, ... 
+]
 
-You can also use the search function to get an array of search results.
-
-```js
-const { search } = require("rlyrics");
-search("Alan Walker Alone").then(console.log, console.error);
+// Result
+Result {
+  name: 'Alone',
+  artist: [
+    Artist {
+      name: 'Alan Walker',
+      url: 'https://www.musixmatch.com/artist/Alan-Walker-3'
+    }
+  ],
+  icon: 'https://s.mxmcdn.net/images-storage/albums4/0/6/5/4/3/7/36734560_350_350.jpg',
+  lyrics: 'Lost in your mind\n' +
+    'I wanna know\n' +
+    'Am I losing my mind?\n' +
+    'Never let me go\n' +
+    '\n' +
+    'If this night is not forever\n' +
+    'At least we are together\n' +
+    'I know I′m not alone\n' +
+    "I know I'm not alone\n"
+   ...
+}
 ```
 
-## Get Details Function
-
-Get full details of a song.
-```js
-const { getDetails } = require("rlyrics");
-getDetails("Alan Walker Alone").then(console.log, console.error);
-```
+## Dependencies
+* axios
+* cheerio
 
 ## License
-
 [MIT](https://choosealicense.com/licenses/mit/)
