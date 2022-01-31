@@ -4,7 +4,8 @@
     "description": "A module that allows users to scrape song lyrics from musixmatch.",
     "main": "main.js",
     "scripts": {
-        "test": "node ./src/test/test.js"
+        "start": "node dist/main.js",
+        "build": "tsc -p ."
     },
     "repository": {
         "type": "git",
