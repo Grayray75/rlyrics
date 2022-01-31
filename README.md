@@ -18,7 +18,7 @@ const rlyrics = new Rlyrics();
 
 // Define Query
 const query = "Alan walker - Alone"
-const URL = "https://www.musixmatch.com/lyrics/Alan-Walker-3/Alone"
+const url = "https://www.musixmatch.com/lyrics/Alan-Walker-3/Alone"
 
 // #getLyrics Method - Get lyrics of the best result
 rlyrics.getLyrics(query)
